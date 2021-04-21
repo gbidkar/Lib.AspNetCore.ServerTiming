@@ -25,7 +25,7 @@ namespace Lib.AspNetCore.ServerTiming.Http.Headers
         /// <summary>
         /// Gets the metric value.
         /// </summary>
-        public decimal? Value { get; }
+        public double? Value { get; }
 
         /// <summary>
         /// Gets the metric description.
@@ -47,8 +47,8 @@ namespace Lib.AspNetCore.ServerTiming.Http.Headers
         /// </summary>
         /// <param name="name">The metric name.</param>
         /// <param name="value">The metric value.</param>
-        public ServerTimingMetric(string name, decimal value)
-            : this(name, (decimal?)value, null)
+        public ServerTimingMetric(string name, double value)
+            : this(name, (double?)value, null)
         { }
 
         /// <summary>
@@ -57,8 +57,8 @@ namespace Lib.AspNetCore.ServerTiming.Http.Headers
         /// <param name="name">The metric name.</param>
         /// <param name="value">The metric value.</param>
         /// <param name="description">The metric description.</param>
-        public ServerTimingMetric(string name, decimal value, string description)
-            : this(name, (decimal?)value, description)
+        public ServerTimingMetric(string name, double value, string description)
+            : this(name, (double?)value, description)
         { }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Lib.AspNetCore.ServerTiming.Http.Headers
             : this(name, null, description)
         { }
 
-        private ServerTimingMetric(string name, decimal? value, string description)
+        private ServerTimingMetric(string name, double? value, string description)
         {
             if (String.IsNullOrEmpty(name))
             {

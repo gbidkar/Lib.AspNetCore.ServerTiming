@@ -69,7 +69,7 @@ namespace Lib.AspNetCore.ServerTiming
         /// <param name="functionName">Optional, populated compile-time with the name of the calling function</param>
         /// <param name="filePath">Optional, populated compile-time with the path to the calling file</param>
         /// <param name="lineNumber">Optional, populated compile-time with line number in the calling file</param>
-        public static void AddMetric(this IServerTiming serverTiming, decimal duration,
+        public static void AddMetric(this IServerTiming serverTiming, double duration,
             string metricName = null,
             [CallerMemberName] string functionName = null,
             [CallerFilePath] string filePath = null,
